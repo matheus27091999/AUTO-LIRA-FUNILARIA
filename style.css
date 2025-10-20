@@ -204,7 +204,9 @@ a {
 }
 
 .slide-button:hover{
-    background-color: #333
+    color: black;
+    background-color: white;
+    
 }
 
 .swiper-button-prev {
@@ -342,7 +344,7 @@ body {
 
 
 .laranja2{
-    color: #111112;
+    color: #000000;
 }
 
 .laranja2:hover{
