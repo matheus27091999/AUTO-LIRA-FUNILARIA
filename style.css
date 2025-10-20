@@ -30,6 +30,7 @@ a {
 /* --- CONTAINER DAS BARRAS DE CONTATO --- */
 .cabecalho-contatos {
     /* Este container agora agrupa as duas barras */
+    font-size: 16px;
 }
 
 /* --- BARRA DO TOPO --- */
@@ -202,16 +203,16 @@ a {
     transition: background-color 0.3s ease;
 }
 
-.slide-button:hover {
-    background-color: #ff9900;
+.slide-button:hover{
+    background-color: #000000;
 }
 
 .swiper-button-prev {
-    color: #ffa217;
+    color: #ed8022;
 }
 
 .swiper-button-next{
-    color: #ffa217;
+    color: #ed8022;
 }
 
 body {
@@ -279,11 +280,14 @@ body {
   .container1 {
     padding: 15px;
     text-align: center;
+    background-color: #ed8022;
+    border-radius: 10px;
   }
   
   .imagem__container1 {
       max-width: 100%;
       height: auto;
+      border-radius: 10px;
   }
 
 .coluna-texto2{
@@ -335,6 +339,8 @@ body {
 .laranja{
     color: #ffa217;
 }
+
+
 
 
 /* ==========================================================================
