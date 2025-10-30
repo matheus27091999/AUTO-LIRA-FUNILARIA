@@ -317,6 +317,11 @@ body {
     justify-content: center;
     margin-left: 6em;
 }
+
+.botao:hover{
+    background: white;
+    color: #000000;
+}
 .cabecalho{
     font-size: 72px;
     margin-bottom: 1em;
