@@ -342,6 +342,9 @@ body {
     color: #ffa217;
 }
 
+.preto{
+    color: #FFF8DC;
+}
 
 .laranja2{
     color: #000000;
@@ -350,6 +353,209 @@ body {
 .laranja2:hover{
     color: #ffa217;
 }
+
+/* --- 1. O Contêiner Principal (Sem alterações) --- */
+.container__servicos {
+    width: 60%; 
+    max-width: 400px; 
+    margin: 40px auto; 
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    height: 70%;
+}
+
+/* --- 2. A Lista (UL) --- */
+/* (Aqui está a principal mudança) */
+.lista__servicos {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    
+    /* Mágica do Flexbox! */
+    display: flex;
+    flex-direction: column; /* <<-- MUDANÇA: Organiza os itens em coluna */
+    align-items: center; /* <<-- MUDANÇA: Centraliza a coluna no container */
+    
+    gap: 20px; /* Isso agora cria o espaço VERTICAL entre os itens */
+}
+
+/* --- 3. O Item da Lista (LI) --- */
+/* (Ajustamos para controlar a largura da coluna) */
+.item__lista {
+    /* Define uma largura para os botões não ficarem muito largos */
+    width: 100%; 
+    max-width: 400px; /* Ajuste esse valor como preferir */
+    
+    
+    /* Isso força o link <a> a preencher o <li> */
+    display: flex;
+}
+
+/* --- 4. O Link "Botão/Card" (A) (Sem alterações) --- */
+/* --- 4. O Link "Botão/Card" (A) --- */
+.teste {
+    display: block;
+    width: 100%; 
+    padding: 25px 20px;
+    box-sizing: border-box; 
+    background-color: #ed8022;
+    color: #000000;
+   
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    
+    /* >> ESTA É A LINHA QUE REMOVE O SUBLINHADO << */
+    text-decoration: none; text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-weight: 700px;
+}
+
+/* --- 5. Efeito HOVER no Link (A) (Sem alterações) --- */
+.teste:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+    background-color: #000000;
+    color: #ed8022;
+    
+}
+
+/* --- 1. O Contêiner Principal (o <div>) --- */
+.container__texto {
+    /* Layout */
+    width: 90%;
+    max-width: 1400px; /* Um bom tamanho para texto e imagem */
+    margin: 40px auto; /* Centraliza na tela (com 40px de espaço em cima/baixo) */
+    border-radius: 10px;
+    /* Aparência de Card */
+    background-color: #ed8022; /* Fundo branco */
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    
+    /* Alinhamento */
+    text-align: center; /* Centraliza todo o texto e a imagem */
+    box-sizing: border-box;
+}
+
+/* --- 2. O Título Principal (o <h2>) --- */
+/* (O usuário usou a mesma classe para h2 e p, então vamos separá-los) */
+h2.texto__principal {
+    font-family: Arial, sans-serif;
+    font-size: 2.5rem; /* Tamanho grande para o título */
+    font-weight: 800;
+    color: #000000; /* Cor escura */
+    margin-top: 0; /* Remove margem de cima padrão */
+    margin-bottom: 10px; /* Pequeno espaço até o parágrafo */
+    
+}
+
+/* --- 3. O Parágrafo/Subtítulo (o <p>) --- */
+p.texto__principal {
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Tamanho menor que o título */
+    color: #000000; /* Cor um pouco mais clara */
+    margin-bottom: 30px; /* Espaço maior antes da imagem */
+    line-height: 1.6; /* Melhora a legibilidade (caso você adicione mais texto) */
+    font-weight: 600;
+    text-align: left;
+}
+
+/* --- 4. A Imagem --- */
+.imagem__servicos2 {
+    /* Responsividade */
+    width: 100%; /* Ocupa 100% do container */
+    max-width: 700px; /* Define um limite máximo de largura */
+    height: auto; /* Mantém a proporção da imagem */
+    border: 0.1px solid #ed8022;
+    /* Estilo */
+    border-radius: 8px; /* Cantos arredondados, igual ao card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para a imagem */
+}
+
+.container__flex{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.auto__lira{
+    width: 40%;
+    margin-top: 16em;
+}
+
+/* --- CSS para o Footer --- */
+
+footer {
+    /* Cor de fundo escura */
+    background-color: #111112; 
+    /* Cor do texto principal */
+    color: #fff; 
+    padding: 30px 20px;
+    /* Usa Flexbox para organizar o conteúdo interno */
+    display: flex;
+    /* Distribui o espaço entre os blocos (Contato e Siga-nos) */
+    justify-content: space-around; 
+    /* Centraliza verticalmente o texto de copyright */
+    align-items: center; 
+    /* Permite que o conteúdo se empilhe em telas pequenas */
+    flex-wrap: wrap; 
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para as seções de Contato e Mídias Sociais */
+footer > div {
+    /* Define uma largura mínima para a seção */
+    min-width: 200px; 
+    /* Adiciona margem inferior para telas pequenas */
+    margin-bottom: 20px; 
+}
+
+/* Estilo para os títulos (h4) */
+footer h4 {
+    color: #ed8022;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    /* Destaca o título com um sublinhado simples */
+    border-bottom: 2px solid #555; 
+    padding-bottom: 5px;
+}
+
+/* Estilo para os parágrafos de contato */
+footer p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+/* Estilo para os links */
+footer a {
+    color: #ccc; /* Cor clara para os links */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+/* Efeito ao passar o mouse (hover) nos links */
+footer a:hover {
+    /* Cor Laranja (ou Preto, dependendo do que você preferir destacar) */
+    color: #ff9900; 
+    text-decoration: underline;
+}
+
+/* Estilo para o Copyright */
+footer > p:last-child {
+    /* Garante que o copyright fique numa linha separada em telas maiores */
+    flex-basis: 100%; 
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    /* Linha sutil de separação */
+    border-top: 0.5px solid #ffffff; 
+    font-size: 0.8em;
+}
+
 
 
 /* ==========================================================================
